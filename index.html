@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Phonology - Tech & Troubleshooting</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="bubble-background"></div>
+
+<header>
+<img src="D5BCAD11-85F8-4E88-84E9-9BE75C161AA3.jpeg" alt="Phonology Logo" class="logo" />
+<nav>
+<a href="#home">HOME</a>
+<a href="#shop">SHOP</a>
+<a href="#inquiries">INQUIRIES</a>
+<a href="#about">ABOUT</a>
+<a href="#location">LOCATION</a>
+<a href="#signup">SIGN UP</a>
+</nav>
+</header>
+
+<main id="home">
+<section class="showcase">
+<h1>EXPLORE OUR ANDROID & APPLE PHONES</h1>
+<p>Your one-stop shop for tech solutions & troubleshooting!</p>
+</section>
+
+<section id="shop">
+<h2>WIRELESS SERVICES SHOP</h2>
+<p>Discover affordable plans and bundles for all your needs.</p>
+<button>Shop Now</button>
+</section>
+
+<section id="inquiries">
+<h2>SUBMIT A TECH INQUIRY / MAKE AN APPOINTMENT</h2>
+<form>
+<input type="text" placeholder="Your Name" required />
+<input type="email" placeholder="Your Email" required />
+<textarea placeholder="Describe your issue or appointment request..." required></textarea>
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<section id="about">
+<h2>ABOUT PHONOLOGY</h2>
+<p>We are your trusted tech troubleshooting partner, specializing in mobile solutions and wireless services.</p>
+</section>
+
+<section id="location">
+<h2>OUR LOCATION</h2>
+<p>123 Tech Avenue, Innovation City, USA</p>
+</section>
+
+<section id="signup">
+<h2>SIGN UP FOR UPDATES</h2>
+<form>
+<input type="email" placeholder="Your Email" required />
+<button type="submit">Sign Up</button>
+</form>
+</section>
+</main>
+
+<!-- Chat Box -->
+<div class="chatbox">
+<div class="chatbox-header">CHAT WITH US</div>
+<div class="chatbox-messages"></div>
+<input type="text" placeholder="Type a message..." class="chatbox-input" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+Style.css
+
+body {
+margin: 0;
+font-family: Tahoma, sans-serif;
+text-transform: uppercase;
+background: white;
+color: #ff69b4;
+position: relative;
+overflow-x: hidden;
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+background: linear-gradient(to right, #ff69b4, #ffa500, #ffeb3b);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+height: 60px;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+.showcase, section {
+text-align: center;
+padding: 60px 20px;
+}
+
+section {
+background: rgba(255, 192, 203, 0.1);
+margin: 20px 0;
+border-radius: 12px;
+}
+
+button {
+background: #ff69b4;
+border: none;
+padding: 10px 20px;
+color: white;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background: #ffa500;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+form input, form textarea {
+width: 80%;
+max-width: 400px;
+margin: 10px 0;
+padding: 10px;
+border: 2px solid #ff69b4;
+border-radius: 5px;
+}
+
+.bubble-background {
+position: fixed;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle, #ff69b4, #ffa500, #ffeb3b);
+opacity: 0.2;
+z-index: -1;
+animation: moveBubbles 30s infinite linear;
+}
+
+@keyframes moveBubbles {
+0% { background-position: 0 0; }
+100% { background-position: 1000px 1000px; }
+}
+
+.chatbox {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 250px;
+background: #ff69b4;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+display: flex;
+flex-direction: column;
+}
+
+.chatbox-header {
+background: #ffa500;
+color: white;
+padding: 10px;
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.chatbox-messages {
+height: 150px;
+padding: 10px;
+background: white;
+color: black;
+overflow-y: auto;
+}
+
+.chatbox-input {
+border: none;
+padding: 10px;
+border-top: 1px solid #ffa500;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}

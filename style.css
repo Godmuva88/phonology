@@ -1,0 +1,128 @@
+body {
+margin: 0;
+font-family: Tahoma, sans-serif;
+text-transform: uppercase;
+background: white;
+color: #ff69b4;
+position: relative;
+overflow-x: hidden;
+}
+
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+background: linear-gradient(to right, #ff69b4, #ffa500, #ffeb3b);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+height: 60px;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+.showcase, section {
+text-align: center;
+padding: 60px 20px;
+}
+
+section {
+background: rgba(255, 192, 203, 0.1);
+margin: 20px 0;
+border-radius: 12px;
+}
+
+button {
+background: #ff69b4;
+border: none;
+padding: 10px 20px;
+color: white;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background: #ffa500;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+form input, form textarea {
+width: 80%;
+max-width: 400px;
+margin: 10px 0;
+padding: 10px;
+border: 2px solid #ff69b4;
+border-radius: 5px;
+}
+
+.bubble-background {
+position: fixed;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle, #ff69b4, #ffa500, #ffeb3b);
+opacity: 0.2;
+z-index: -1;
+animation: moveBubbles 30s infinite linear;
+}
+
+@keyframes moveBubbles {
+0% { background-position: 0 0; }
+100% { background-position: 1000px 1000px; }
+}
+
+.chatbox {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 250px;
+background: #ff69b4;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+display: flex;
+flex-direction: column;
+}
+
+.chatbox-header {
+background: #ffa500;
+color: white;
+padding: 10px;
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.chatbox-messages {
+height: 150px;
+padding: 10px;
+background: white;
+color: black;
+overflow-y: auto;
+}
+
+.chatbox-input {
+border: none;
+padding: 10px;
+border-top: 1px solid #ffa500;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
